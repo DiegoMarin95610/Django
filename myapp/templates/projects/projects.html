@@ -1,0 +1,18 @@
+    {% extends 'layouts/base.html' %}
+
+    {% block content %}
+
+    <h1>Projects</h1>
+    <ul>
+        <li>
+            <a href="{% url 'new_project' %}">New project</a>
+        </li>
+    </ul>
+    {% for project in projects %}
+    
+    <div>
+        <p>{{project.name}}</p>
+    </div>
+    
+    {% endfor %}
+    {% endblock %}
